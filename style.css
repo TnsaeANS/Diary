@@ -1,8 +1,7 @@
 body {
 	background-color: white;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	padding-top: 10vh;
 	height: 100vh;
 	flex-direction: column;
 }
@@ -87,4 +86,70 @@ a {
 }
 a:hover{
 	opacity: .7;
+}
+
+.home{
+	color: #888;
+	align-items: flex-start;
+}
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(245, 245, 245);
+	display: flex;
+	justify-content: space-between;
+	width: 100vw;
+	height: 70px;
+	align-items: center;
+	z-index: 1;
+}
+.navbar .search-bar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 230px;
+	width: 30%;
+}
+.search-bar input {
+	border-radius: 20px;
+	border: 1px solid #ccc;
+}
+  
+.search-bar button {
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: none;
+	background-color: rgba(113, 199, 46, 0.7);;
+	color: #fff;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.profile{
+	justify-content: end;
+}
+
+.actions{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap:10px;
+}
+.actions p{
+	color: #888;
+}
+.diary{
+	display: flex;
+	margin-left: 20px;
+	align-items: top;
+	margin-top: 10px;
+	color: #888;
+	font-size: 40px;
+}
+
+.homeBody{
+	align-items: flex-start;
+	justify-content: flex-start;
 }
