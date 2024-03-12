@@ -1,5 +1,5 @@
 body {
-	background-image: url(img1.jpg);
+	background-color: white;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -14,15 +14,26 @@ body {
 
 form {
 	width: 500px;
+	height: 550px;
 	border: 2px solid #ccc;
 	padding: 30px;
-	background: lightpink;
+	background-color: #cefa;
+	border-radius: 15px;
+}
+
+.login{
+	width: 500px;
+	height: 390px;
+	border: 2px solid #ccc;
+	padding: 30px;
+	background-color: #cefa;
 	border-radius: 15px;
 }
 
 h2 {
-	text-align: center;
+	text-align: left;
 	margin-bottom: 40px;
+	color: #888;
 }
 
 input {
@@ -35,17 +46,17 @@ input {
 }
 label {
 	color: #888;
-	font-size: 18px;
+	font-size: 15px;
 	padding: 10px;
 }
 
 button {
-	float: right;
-	background: lightcoral;
+	
+	background: rgb(49, 209, 182);
 	padding: 10px 15px;
 	color: #fff;
 	border-radius: 5px;
-	margin-right: 10px;
+	margin-left: 190px;
 	border: none;
 }
 button:hover{
@@ -67,11 +78,10 @@ h1 {
 
 a {
 	float: right;
-	background: #555;
 	padding: 10px 15px;
-	color: #fff;
+	color: #888;
 	border-radius: 5px;
-	margin-right: 10px;
+	margin-right: 70px;
 	border: none;
 	text-decoration: none;
 }
