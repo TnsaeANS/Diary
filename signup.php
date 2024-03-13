@@ -5,53 +5,55 @@
   <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
-     <form action="home.php" method="post">
+     <form class="signup" method="post">
        <h2>SIGN UP</h2>
-       <?php if (isset($_GET['error'])) { ?>
-         <p class="error"><?php echo $_GET['error']; ?></p>
-       <?php } ?>
-
-          <?php if (isset($_GET['success'])) { ?>
-               <p class="success"><?php echo $_GET['success']; ?></p>
-          <?php } ?>
 
           <label>Name</label>
-          <?php if (isset($_GET['name'])) { ?>
-               <input type="text" 
-                      name="name" 
-                      placeholder="Name"
-                      value="<?php echo $_GET['name']; ?>"><br>
-          <?php }else{ ?>
-               <input type="text" 
-                      name="name" 
-                      placeholder="Name"><br>
-          <?php }?>
+          <input type="text" 
+                 name="name" 
+                 placeholder=""
+                 value=""><br>
 
           <label>User Name</label>
-          <?php if (isset($_GET['uname'])) { ?>
-               <input type="text" 
-                      name="uname" 
-                      placeholder="User Name"
-                      value="<?php echo $_GET['uname']; ?>"><br>
-          <?php }else{ ?>
-               <input type="text" 
-                      name="uname" 
-                      placeholder="User Name"><br>
-          <?php }?>
+          <input type="text" 
+                 name="uname" 
+                 placeholder=""
+                 value=""><br>
 
-
-       <label>Password</label>
-       <input type="password" 
+          <label>Password</label>
+          <input type="password" 
                  name="password" 
-                 placeholder="Password"><br>
+                 placeholder=""><br>
 
           <label>Re Password</label>
           <input type="password" 
                  name="re_password" 
-                 placeholder="Re_Password"><br>
+                 placeholder=""><br>
 
-       <button type="submit">Sign Up</button>
-          <a href="login.php" class="ca">Already have an account?</a>
+       <button type="submit" name="submit">Sign Up</button>
+       <a href="login.php" class="ca">Already have an account? Log in</a>
      </form>
 </body>
 </html>
+
+
+<?php
+     include "db_conn.php";
+     
+
+     if (isset($_POST['submit'])) {
+          $name = $_POST['name'];
+          $uname = $_POST['uname'];
+          $password = $_POST['password'];
+          $re_password = $_POST['re_password'];
+          echo "aasaa";
+               $sql = "INSERT INTO users(`name`, `user_name`, `password`) VALUES ('$name', '$uname', '$password')";
+               $result = mysqli_query($conn, $sql);
+               if ($result) {
+                    // header("Location: home.php");
+                    echo "Account created successfully";
+               }else {
+                    echo "The record was not inserted successfully because of this error ---> ". mysqli_error($conn);
+               }
+          }
+?>

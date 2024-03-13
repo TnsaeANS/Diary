@@ -24,6 +24,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     </div>
      <div class="homeBody">
      <h1 class="home">Hello, <?php echo $_SESSION['name']; ?></h1>
+     <button class="profile-button" onclick="location.href='profile.php';">Profile</button>
      </div>
 </body>
 </html>
@@ -34,3 +35,4 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
      exit();
 }
  ?>
+
