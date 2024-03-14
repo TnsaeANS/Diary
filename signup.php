@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
-     <form class="signup" method="post">
+     <form class="signup" method="post" action="signup.php">
        <h2>SIGN UP</h2>
 
           <label>Name</label>

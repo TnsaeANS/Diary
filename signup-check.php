@@ -6,7 +6,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])
     && isset($_POST['name']) && isset($_POST['re_password'])) {
 
   function validate($data){
-       $data = trim($data);
+     $data = trim($data);
      $data = stripslashes($data);
      $data = htmlspecialchars($data);
      return $data;
@@ -61,6 +61,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])
               header("Location: signup.php?success=Your account has been created successfully");
            exit();
            }else {
+            
                header("Location: signup.php?error=unknown error occurred&$user_data");
             exit();
            }
