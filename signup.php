@@ -20,6 +20,12 @@
                  placeholder=""
                  value=""><br>
 
+          <label>Email</label>
+          <input type="text" 
+                 name="email" 
+                 placeholder=""
+                 value=""><br>
+
           <label>Password</label>
           <input type="password" 
                  name="password" 
@@ -44,14 +50,14 @@
      if (isset($_POST['submit'])) {
           $name = $_POST['name'];
           $uname = $_POST['uname'];
+          $email = $_POST['email'];
           $password = $_POST['password'];
           $re_password = $_POST['re_password'];
-          echo "aasaa";
-               $sql = "INSERT INTO users(`name`, `user_name`, `password`) VALUES ('$name', '$uname', '$password')";
-               $result = mysqli_query($conn, $sql);
+          echo "ok";
+          $sql = "INSERT INTO users(`user_name`, `password`, `name`, `email`) VALUES ('$uname', '$password', '$name', '$email')";               $result = mysqli_query($conn, $sql);
                if ($result) {
-                    // header("Location: home.php");
                     echo "Account created successfully";
+                    header("Location: login.php");
                }else {
                     echo "The record was not inserted successfully because of this error ---> ". mysqli_error($conn);
                }
