@@ -13,7 +13,7 @@ body {
 }
 .signup{
 	width: 500px;
-	height: 600px;
+	height: auto;
 	border: 2px solid #ccc;
 	padding: 30px;
 	background-color: #cefa;
@@ -22,7 +22,7 @@ body {
 }
 .login{
 	width: 500px;
-	height: 390px;
+	height: auto;
 	border: 2px solid #ccc;
 	padding: 30px;
 	background-color: #cefa;
@@ -147,3 +147,5 @@ a:hover{
 	align-items: flex-start;
 	justify-content: flex-start;
 }
+
+
