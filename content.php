@@ -16,7 +16,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 </head>
 <body>
     <div class="navbar">
-          <div class="diary">Diary</div>
+    <button onclick="location.href='home.php';" class="diary">Diary</button>
+
           <div class="actions">
                <p class="profile"><?php echo $_SESSION['user_name']; ?></p>
                <a class="logout" href="logout.php">Logout</a>
@@ -31,6 +32,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <textarea name="content" id="content" placeholder="Enter Content" rows="4" cols="50">
         </textarea>
         <button type="submit" name="submit">Submit</button>
+        <button  name="back" onclick="location.href='display.php';">Go Back</button>
 
 
     </form>
