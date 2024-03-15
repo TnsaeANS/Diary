@@ -20,6 +20,12 @@
                  placeholder=""
                  value=""><br>
 
+          <label>Email</label>
+          <input type="text" 
+                 name="email" 
+                 placeholder=""
+                 value=""><br>
+
           <label>Password</label>
           <input type="password" 
                  name="password" 
@@ -38,22 +44,30 @@
 
 
 <?php
-     include "db_conn.php";
-     
+include "db_conn.php";
 
-     if (isset($_POST['submit'])) {
-          $name = $_POST['name'];
-          $uname = $_POST['uname'];
-          $password = $_POST['password'];
-          $re_password = $_POST['re_password'];
-          echo "aasaa";
-               $sql = "INSERT INTO users(`name`, `user_name`, `password`) VALUES ('$name', '$uname', '$password')";
-               $result = mysqli_query($conn, $sql);
-               if ($result) {
-                    // header("Location: home.php");
-                    echo "Account created successfully";
-               }else {
-                    echo "The record was not inserted successfully because of this error ---> ". mysqli_error($conn);
-               }
-          }
+if (isset($_POST['submit'])) {
+  $name = $_POST['name'];
+  $uname = $_POST['uname'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  $re_password = $_POST['re_password'];
+
+  if (empty($name) || empty($uname) || empty($email) || empty($password) || empty($re_password)) {
+    header("Location: signup.php?error=Please fill in all the fields&name=$name&uname=$uname&email=$email");
+    exit();
+  } elseif ($password !== $re_password) {
+    header("Location: signup.php?error=The confirmation password does not match&name=$name&uname=$uname&email=$email");
+    exit();
+  } else {
+    $sql = "INSERT INTO users(`user_name`, `password`, `name`, `email`) VALUES ('$uname', '$password', '$name', '$email')";
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+      header("Location: login.php?success=Account created successfully");
+      exit();
+    } else {
+      echo "The record was not inserted successfully because of this error ---> " . mysqli_error($conn);
+    }
+  }
+}
 ?>
