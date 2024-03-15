@@ -4,7 +4,7 @@ include "db_conn.php";
 session_start();
 
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
-
+    $user_id = $_SESSION['id'];
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +46,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 
 <?php
-$sql= "SELECT * FROM `crud`";
+$sql= "SELECT * FROM `crud` WHERE user_id = $user_id";
 $result= mysqli_query($conn, $sql);
 
 if($result){

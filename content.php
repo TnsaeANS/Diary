@@ -4,6 +4,7 @@ include "db_conn.php";
 session_start();
 
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+     $user_id = $_SESSION['id'];
 
  ?>
 <!DOCTYPE html>
@@ -32,7 +33,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <textarea name="content" id="content" placeholder="Enter Content" rows="4" cols="50">
         </textarea>
         <button type="submit" name="submit">Submit</button>
-        <button  name="back" onclick="location.href='display.php';">Go Back</button>
+        <button  name="back" onclick="location.href='display.php'">Go Back</button>
 
 
     </form>
@@ -45,10 +46,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         $title =$_POST['title'];
         $content =$_POST['content'];
 
-                $sql = "INSERT INTO crud(`title`, `content`) VALUES ('$title', '$content')";
+                $sql = "INSERT INTO crud(`title`, `content`, `user_id`) VALUES ('$title', '$content', '$user_id')";
                 $result = mysqli_query($conn, $sql);
                if ($result) {
                     echo "Content submited successfully";
+                    header ("location: display.php");
                }else {
                     echo "The content was not inserted successfully ". mysqli_error($conn);
                }
