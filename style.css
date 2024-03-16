@@ -18,7 +18,8 @@ body {
 	padding: 30px;
 	background-color: #cefa;
 	border-radius: 15px;
-	
+	margin-bottom: auto;
+		
 }
 .login{
 	width: 500px;
@@ -27,6 +28,7 @@ body {
 	padding: 30px;
 	background-color: #cefa;
 	border-radius: 15px;
+	margin-bottom: auto;
 	
 }
 input {
@@ -157,7 +159,7 @@ a:hover{
 	background-color: #3498db;
 	color: #fff;
 	text-decoration: none;
-	cursor: pointer;
+	cursor: pointer;}
 
 .homeBody{
 	align-items: flex-start;
