@@ -1,0 +1,55 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.navbar {
+    background-color: #f0f0f0;
+    position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(245, 245, 245);
+	display: flex;
+	justify-content: space-between;
+	width: 100vw;
+	height: 70px;
+	align-items: center;
+	z-index: 1;
+}
+
+.diary {
+    color: #333333;
+}
+
+.search-bar input {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.search-bar button {
+    background-color:rgba(205, 144, 247, 0.7);
+    color: #ffffff;
+}
+
+.actions .profile {
+    color: #333333;
+}
+
+.actions .logout {
+    color: #ff0000;
+}
+
+.home {
+    color: #333333;
+}
+
+.profile-button {
+    background-color: lightpink;
+    color: #ffffff;
+}
+
+.theme-toggle {
+    background-color: #4caf50;
+    color: #ffffff;
+}

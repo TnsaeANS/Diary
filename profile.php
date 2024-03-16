@@ -57,7 +57,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         $sql = "UPDATE users SET user_name = '$new_name', password = '$new_password' WHERE id = '$id'";
         $result = mysqli_query($conn, $sql);
         if ($result) {
-            echo "";
+            $_SESSION['user_name'] = $new_name;
         } else {
             echo "Error updating profile: " . mysqli_error($conn);
         }
