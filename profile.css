@@ -18,6 +18,11 @@
 	margin-top: 10px;
 	color: #888;
 	font-size: 40px;
+    font-family:'Times New Roman', Times, serif;
+    border: none;
+	background-color: rgb(245, 245, 245);
+    text-decoration-line: none;
+    
 }
 .actions{
 	display: flex;
@@ -85,3 +90,9 @@ input[type="text"],input[type="password"]{
     margin-left: 10px;
     font-size: 19px;
 }
+
+
+
+/* content css(sorry arsi i got lazy) */
+
+

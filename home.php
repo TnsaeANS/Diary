@@ -28,8 +28,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         </div>
         <button class="theme-toggle" onclick="location.href='?toggle_theme=true';">Tog</button>
     </div>
-    <h1 class="home">Hello, <?php echo $_SESSION['name']; ?></h1>
-    <button class="profile-button" onclick="location.href='profile.php';">Profile</button>
+
+     <div class="homeBody">
+     <h1 class="home">Hello, <?php echo $_SESSION['name']; ?></h1>
+     <button class="profile-button" onclick="location.href='profile.php';">Profile</button>
+     <button onclick="location.href='display.php';">Diary</button>
+
+
 </body>
 </html>
 <?php
