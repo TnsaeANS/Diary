@@ -48,7 +48,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 if(isset($_POST['submit'])){
                     $search=$_POST['search'];
                     $user_id = $_SESSION['id'];
-                    $sql="SELECT * FROM `crud` WHERE id='$search' AND user_id='$user_id'";
+                    $sql="SELECT * FROM `crud` WHERE (id LIKE '%$search%' OR title LIKE '%$search%' OR content LIKE '%$search%') AND user_id='$user_id'
+                    ";
                     $result=mysqli_query($conn, $sql);
                     if(mysqli_num_rows($result)>0){
                         echo '<thead>
@@ -59,14 +60,14 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                             </tr>  
                               </thead>';
                               
-                            $row=mysqli_fetch_assoc($result);
+                            while($row=mysqli_fetch_assoc($result)){
                             echo '<tbody>
                             <tr>
                             <td>'.$row['id'].'</td>
                             <td>'.$row['title'].'</td>
                             <td>'.$row['content'].'</td> 
                             </tr>
-                            </tbody>';
+                            </tbody>';}
                     }else{
                         echo "There is no data like that.";
                     }
