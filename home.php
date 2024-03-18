@@ -43,12 +43,28 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
      <button onclick="location.href='display.php';">Diary</button>
      </div>
 <div>
+<?php
+// Define an array of quotes
+$quotes = array(
+    "You can always edit a bad page. You can’t edit a blank page.",
+    "If there's a book that you want to read, but it hasn’t been written yet, then you must write it.",
+    "One small step for man, one big step for mankind.",
+);
+
+// Select a random quote
+$randomQuote = $quotes[rand(0, count($quotes) - 1)];
+
+// Display the quote
+echo $randomQuote;
+?>
+
             <table>
                 <?php
                 if(isset($_POST['submit'])){
                     $search=$_POST['search'];
                     $user_id = $_SESSION['id'];
-                    $sql="SELECT * FROM `crud` WHERE id='$search' AND user_id='$user_id'";
+                    $sql="SELECT * FROM `crud` WHERE (id LIKE '%$search%' OR title LIKE '%$search%' OR content LIKE '%$search%') AND user_id='$user_id'
+                    ";
                     $result=mysqli_query($conn, $sql);
                     if(mysqli_num_rows($result)>0){
                         echo '<thead>
@@ -59,14 +75,14 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                             </tr>  
                               </thead>';
                               
-                            $row=mysqli_fetch_assoc($result);
+                            while($row=mysqli_fetch_assoc($result)){
                             echo '<tbody>
                             <tr>
                             <td>'.$row['id'].'</td>
                             <td>'.$row['title'].'</td>
                             <td>'.$row['content'].'</td> 
                             </tr>
-                            </tbody>';
+                            </tbody>';}
                     }else{
                         echo "There is no data like that.";
                     }
