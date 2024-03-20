@@ -2,7 +2,13 @@
 include "db_conn.php";
 
 session_start();
+$theme = isset($_SESSION['theme']) ? $_SESSION['theme'] : 'light';
 
+if (isset($_GET['toggle_theme'])) {
+    $theme = ($theme === 'light') ? 'dark' : 'light';
+    $_SESSION['theme'] = $theme;
+    
+}
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
  ?>
@@ -13,15 +19,16 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Management</title>
     <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $theme; ?>.css">
 </head>
 <body>
     <div class="navbar">
     <button onclick="location.href='home.php';" class="diary">Diary</button>
-          <div class="actions">
-               <p class="profile"><?php echo $_SESSION['user_name']; ?></p>
-               <a class="logout" href="logout.php">Logout</a>
-               <button class="theme-toggle" onclick="location.href='?toggle_theme=true';">Tog</button>
-          </div>
+    <div class="actions">
+        <button class="theme-toggle" onclick="location.href='?toggle_theme=true';">Tog</button>
+            <p class="profile"><?php echo $_SESSION['name']; ?></p>
+            <a class="logout" href="logout.php">Logout</a>
+        </div>
     </div>
     <h2 class="pro">Profile Management</h2>
     

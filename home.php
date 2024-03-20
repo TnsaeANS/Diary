@@ -19,7 +19,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 </head>
 <body>
     <div class="navbar">
-        <div class="diary">Diary</div>
+        <div class="diary">Diary</div><link rel="stylesheet" type="text/css" href="<?php echo $theme; ?>.css">
         
         <form method="post">
             <div class="search-bar">
@@ -31,19 +31,22 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         
         
         <div class="actions">
+        <button class="theme-toggle" onclick="location.href='?toggle_theme=true';">Tog</button>
             <p class="profile"><?php echo $_SESSION['name']; ?></p>
             <a class="logout" href="logout.php">Logout</a>
         </div>
-        <button class="theme-toggle" onclick="location.href='?toggle_theme=true';">Tog</button>
+        
     </div>
 
      <div class="homeBody">
      <h1 class="home">Hello, <?php echo $_SESSION['name']; ?></h1>
-     <button class="profile-button" onclick="location.href='profile.php';">Profile</button>
-     <button class="display-button" onclick="location.href='display.php';">Diary</button>
+     <div class="homeButtons">
+        <button class="profile-button" onclick="location.href='profile.php';">Profile</button>
+        <button class="display-button" onclick="location.href='display.php';">Diary</button>
+     </div>
      </div>
 <div>
-<?php
+<p class="inspo"><?php
 // Define an array of quotes
 $quotes = array(
     "You can always edit a bad page. You can’t edit a blank page.",
@@ -56,7 +59,10 @@ $randomQuote = $quotes[rand(0, count($quotes) - 1)];
 
 // Display the quote
 echo $randomQuote;
-?>
+
+?></p>
+
+
             <div class="table-wrapper">
             <table>
                 <?php
