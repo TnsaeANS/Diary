@@ -20,6 +20,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           <div class="actions">
                <p class="profile"><?php echo $_SESSION['user_name']; ?></p>
                <a class="logout" href="logout.php">Logout</a>
+               <button class="theme-toggle" onclick="location.href='?toggle_theme=true';">Tog</button>
           </div>
     </div>
     <h2 class="pro">Profile Management</h2>
