@@ -12,7 +12,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content</title>
     <link rel="stylesheet" href="profile.css">
 </head>
 <body>
@@ -28,15 +27,16 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
     <h2> Content</h2>
     <form action="content.php" method="POST">
-        <input type="name" id="title" name="title" placeholder="Enter Title">
+        <input class="textarea" type="name" id="title" name="title" placeholder="Enter Title">
         <br>
-        <textarea name="content" id="content" placeholder="Enter Content" rows="4" cols="50">
+        <br>
+        <textarea class="textarea" name="content" id="content" placeholder="Enter Content" rows="4" cols="25">
         </textarea>
-        <button type="submit" name="submit">Submit</button>
-        <button  name="back" onclick="location.href='display.php'">Go Back</button>
-
-
+        <br>
+        <button class="button" type="submit" name="submit">Submit</button>
     </form>
+    <button class="button" onclick="location.href='display.php';" >Go Back</button>
+
 
         
 <?php
@@ -49,8 +49,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 $sql = "INSERT INTO crud(`title`, `content`, `user_id`) VALUES ('$title', '$content', '$user_id')";
                 $result = mysqli_query($conn, $sql);
                if ($result) {
-                    echo "Content submited successfully";
                     header ("location: display.php");
+                    echo "Content submited successfully";
                }else {
                     echo "The content was not inserted successfully ". mysqli_error($conn);
                }
