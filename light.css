@@ -3,16 +3,17 @@
     --text-color-body-light: #000000;
     --background-color-navbar: #f0f0f0;
     --text-color-navbar: #333333;
-    --text-color-diary: lightcoral;;
+    --text-color-diary: #1e4f6e;
     --background-color-search-input: #ffffff;
     --text-color-search-input: #000000;
-    --background-color-search-button: rgba(205, 144, 247, 0.7);
+    --background-color-search-button: #588f99;
     --text-color-search-button: #ffffff;
-    --text-color-actions: #333333;
+    --text-color-actions: #1e4f6e;
     --text-color-logout: #ff0000;
     --text-color-home: #333333;
-    --background-color-profile-button: lightpink;
-    --background-color-theme-toggle: #3498db;
+    --background-color-profile-button: #0096C7;
+    --background-color-display-button: #0096C7;
+    --background-color-theme-toggle: #28c9fa;
   }
   
   body {
@@ -61,6 +62,10 @@
   }
   
   .profile-button {
+    background-color: var(--background-color-profile-button);
+    color: var(--text-color-actions);
+  }
+  .display-button {
     background-color: var(--background-color-profile-button);
     color: var(--text-color-actions);
   }

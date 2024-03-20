@@ -116,7 +116,7 @@ a:hover{
 	padding: 5px 10px;
 	border-radius: 5px;
 	border: none;
-	background-color: rgba(205, 144, 247, 0.7);
+	background-color: #90E0EF;
 	color: #fff;
 	cursor: pointer;
 	margin-top: 10px;
@@ -130,16 +130,16 @@ a:hover{
 	width: 150px;
 	border-radius: 15px;
 	font-size: 25px;
-	background-color: lightpink;
-	color: #A94442;
+	background-color:#0096C7;
+	color: #131010;
 }
 .display-button{
 	height: 100px;
 	width: 150px;
 	border-radius: 15px;
 	font-size: 25px;
-	background-color: lightpink;
-	color: #A94442;
+	background-color:#0096C7;
+	color: #131010;
 }
 .actions{
 	display: flex;
@@ -155,7 +155,7 @@ a:hover{
 	margin-left: 20px;
 	align-items: top;
 	margin-top: 10px;
-	color: lightcoral;
+	color: #153A51;
 	font-size: 40px;
 }
 .theme-toggle{
@@ -171,10 +171,24 @@ a:hover{
 	align-items: center;
 	justify-content: center;
 	margin-top: 80px;
+	
 }
-
+.homeButtons{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 60px;
+	gap: 80px;
+}
 
 .table-header{
 	background-color: rgb(245, 245, 245);
 
+}
+
+
+.inspo{
+	margin-top: 30px;
+	color: #888;
 }

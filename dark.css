@@ -3,16 +3,17 @@
     --text-color-body-dark: #ffffff;
     --background-color-navbar: azure;
     --text-color-navbar: #333333;
-    --text-color-diary: #a32828;
-    --background-color-search-input: #333333;
+    --text-color-diary: #2A74A2;
+    --background-color-search-input: #ffffff;
     --text-color-search-input: #ffffff;
-    --background-color-search-button: rgba(205, 144, 247, 0.7);
+    --background-color-search-button: #023E8A;
     --text-color-search-button: #ffffff;
-    --text-color-actions: #ffffff;
+    --text-color-actions: #2A74A2;
     --text-color-logout: #ff0000;
     --text-color-home: #ffffff;
-    --background-color-profile-button: rgb(197, 30, 55);
-    --background-color-theme-toggle: #272997;
+    --background-color-profile-button: #00B8F5;
+    --background-color-display-button: #00B8F5;
+    --background-color-theme-toggle:#5683be;
   }
   
   body {
@@ -52,6 +53,10 @@
   }
   
   .profile-button {
+    background-color: var(--background-color-profile-button);
+    color: var(--text-color-actions);
+  }
+  .display-button {
     background-color: var(--background-color-profile-button);
     color: var(--text-color-actions);
   }
