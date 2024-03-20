@@ -59,8 +59,11 @@ $randomQuote = $quotes[rand(0, count($quotes) - 1)];
 
 // Display the quote
 echo $randomQuote;
+
 ?></p>
 
+
+            <div class="table-wrapper">
             <table>
                 <?php
                 if(isset($_POST['submit'])){
@@ -70,7 +73,8 @@ echo $randomQuote;
                     ";
                     $result=mysqli_query($conn, $sql);
                     if(mysqli_num_rows($result)>0){
-                        echo '<thead>
+
+                        echo  '<thead class="fl-table">
                             <tr>
                             <th>Id</th>
                             <th>Title</th>
@@ -91,7 +95,8 @@ echo $randomQuote;
                     }
                     }
                 ?>
-            </table>    
+            </table>   
+                </div> 
         </div>
 </body>
 </html>

@@ -28,9 +28,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
     <h2> Display </h2>
     <div>
- <button class="profile-button" onclick="location.href='content.php';">Add Content</button>
+ <button class="button" onclick="location.href='content.php';">Add Content</button>
     </div>
-       
+    
+    
+<div class="table-wrapper">   
 <table>
     <thead>
     <tr class="table-header">
@@ -68,8 +70,8 @@ if($result){
         <td>'.$truncatedContent.'</td>
         <td>'.$date_entered.'</td>
         <td>
-        <button class="profile-button"><a href="update.php?updateid='.$id.'">EDIT</a></button>
-        <button class="profile-button"><a href="delete.php?deleteid='.$id.'">DELETE</a></button>
+        <button class="button"><a href="update.php?updateid='.$id.'">EDIT</a></button>
+        <button class="button"><a href="delete.php?deleteid='.$id.'">DELETE</a></button>
         </td>
         
         </tr>';
@@ -78,6 +80,7 @@ if($result){
 ?>
     </tbody>
 </table>
+<div>   
 
 
 </body>
