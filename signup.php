@@ -36,7 +36,7 @@
                  name="re_password" 
                  placeholder=""><br>
 
-       <button type="submit" name="submit">Sign Up</button>
+       <button class="signup-btn" type="signup" name="submit">Sign Up</button>
        <a href="login.php" class="ca">Already have an account? Log in</a>
      </form>
 </body>
