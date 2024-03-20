@@ -39,8 +39,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
      <div class="homeBody">
      <h1 class="home">Hello, <?php echo $_SESSION['name']; ?></h1>
-     <button  onclick="location.href='profile.php';">Profile</button>
-     <button onclick="location.href='display.php';">Diary</button>
+     <button class="profile-button" onclick="location.href='profile.php';">Profile</button>
+     <button class="display-button" onclick="location.href='display.php';">Diary</button>
      </div>
 <div>
 <?php

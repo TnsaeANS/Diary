@@ -105,7 +105,7 @@ a:hover{
 	justify-content: center;
 	align-items: center;
 	margin-left: 200px;
-	width: 30%;
+	width: 80%;
 }
 .search-bar input {
 	border-radius: 20px;
@@ -126,8 +126,14 @@ a:hover{
 	justify-content: end;
 }
 .profile-button{
-	margin-top: 50px;
-	margin-left: -800px;
+	height: 100px;
+	width: 150px;
+	border-radius: 15px;
+	font-size: 25px;
+	background-color: lightpink;
+	color: #A94442;
+}
+.display-button{
 	height: 100px;
 	width: 150px;
 	border-radius: 15px;
@@ -149,7 +155,7 @@ a:hover{
 	margin-left: 20px;
 	align-items: top;
 	margin-top: 10px;
-	color: #888;
+	color: lightcoral;
 	font-size: 40px;
 }
 .theme-toggle{
@@ -162,8 +168,9 @@ a:hover{
 	cursor: pointer;}
 
 .homeBody{
-	align-items: flex-start;
-	justify-content: flex-start;
+	align-items: center;
+	justify-content: center;
+	margin-top: 80px;
 }
 
 

@@ -1,55 +1,72 @@
-body {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.navbar {
-    background-color: #f0f0f0;
+:root {
+    --background-color-body-light: #ffffff;
+    --text-color-body-light: #000000;
+    --background-color-navbar: #f0f0f0;
+    --text-color-navbar: #333333;
+    --text-color-diary: lightcoral;;
+    --background-color-search-input: #ffffff;
+    --text-color-search-input: #000000;
+    --background-color-search-button: rgba(205, 144, 247, 0.7);
+    --text-color-search-button: #ffffff;
+    --text-color-actions: #333333;
+    --text-color-logout: #ff0000;
+    --text-color-home: #333333;
+    --background-color-profile-button: lightpink;
+    --background-color-theme-toggle: #3498db;
+  }
+  
+  body {
+    background-color: var(--background-color-body-light);
+    color: var(--text-color-body-light);
+  }
+  
+  .navbar {
+    background-color: var(--background-color-navbar);
     position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	background-color: rgb(245, 245, 245);
-	display: flex;
-	justify-content: space-between;
-	width: 100vw;
-	height: 70px;
-	align-items: center;
-	z-index: 1;
-}
-
-.diary {
-    color: #333333;
-}
-
-.search-bar input {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.search-bar button {
-    background-color:rgba(205, 144, 247, 0.7);
-    color: #ffffff;
-}
-
-.actions .profile {
-    color: #333333;
-}
-
-.actions .logout {
-    color: #ff0000;
-}
-
-.home {
-    color: #333333;
-}
-
-.profile-button {
-    background-color: lightpink;
-    color: #ffffff;
-}
-
-.theme-toggle {
-    background-color: #4caf50;
-    color: #ffffff;
-}
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 70px;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .diary {
+    color: var(--text-color-diary);
+  }
+  
+  .search-bar input {
+    background-color: var(--background-color-search-input);
+    color: var(--text-color-search-input);
+  }
+  
+  .search-bar button {
+    background-color: var(--background-color-search-button);
+    color: var(--text-color-search-button);
+  }
+  
+  .actions .profile {
+    color: var(--text-color-actions);
+  }
+  
+  .actions .logout {
+    color: var(--text-color-logout);
+  }
+  
+  .home {
+    color: var(--text-color-home);
+  }
+  
+  .profile-button {
+    background-color: var(--background-color-profile-button);
+    color: var(--text-color-actions);
+  }
+  
+  .theme-toggle {
+    background-color: var(--background-color-theme-toggle);
+    color: var(--text-color-actions);
+  }
+  
