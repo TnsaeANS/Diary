@@ -31,7 +31,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         
         
         <div class="actions">
-        <button class="theme-toggle" onclick="location.href='?toggle_theme=true';">Tog</button>
+        <button class="theme-toggle" onclick="location.href='?toggle_theme=true';">Dark</button>
             <p class="profile"><?php echo $_SESSION['name']; ?></p>
             <a class="logout" href="logout.php">Logout</a>
         </div>
@@ -49,9 +49,16 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 <p class="inspo"><?php
 // Define an array of quotes
 $quotes = array(
-    "You can always edit a bad page. You can’t edit a blank page.",
-    "If there's a book that you want to read, but it hasn’t been written yet, then you must write it.",
+    "You can always edit a bad page. You can't edit a blank page.",
+    "If there's a book that you want to read, but it hasn't been written yet, then you must write it.",
     "One small step for man, one big step for mankind.",
+    "If a story is in you, it has to come out.",
+    "Your intuition knows what to write, so get out of the way.",
+    "The scariest moment is always just before you start.",
+    "The best way to predict the future is to create it.",
+    "Start writing, no matter what. The water does not flow until the faucet is turned on.",
+    "You can't use up creativity. The more you use, the more you have.",
+    "The greatest glory in life is not in never falling, but in rising every time we fall."
 );
 
 // Select a random quote
